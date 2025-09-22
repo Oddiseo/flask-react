@@ -10,7 +10,13 @@ def home():
 
 @app.route('/api/users')
 def get_users():
-    return {"users": ["Alice", "Bob", "Charlie"]}
+    return {
+        "users": [
+            {"id": 1, "name": "Alice"},
+            {"id": 2, "name": "Bob"},
+            {"id": 3, "name": "Charlie"}
+        ]
+    }
 
 @app.route('/api/fruits')
 def get_fruits():
